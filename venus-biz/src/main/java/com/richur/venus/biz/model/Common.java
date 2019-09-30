@@ -11,4 +11,8 @@ import lombok.Getter;
 @Getter
 public class Common {
     private Long id;
+    Common(){}
+    Common(Long id){
+        this.id = id;
+    }
 }

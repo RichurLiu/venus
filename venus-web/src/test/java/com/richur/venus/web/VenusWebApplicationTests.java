@@ -10,6 +10,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class VenusWebApplicationTests {
@@ -30,10 +34,19 @@ public class VenusWebApplicationTests {
     }
 
     @Test
-    public void webConfigTest(){
+    public void webConfigTest() {
 
         System.out.println(JSON.toJSONString(webConfig.getUserName()));
         System.out.println(JSON.toJSONString(webConfig.getRich()));
     }
+
+    @Test
+    public void test01() {
+        Date date = new Date();
+        System.out.println(String.valueOf(date.getTime()));
+        System.out.println(String.valueOf(date));
+
+    }
+
 
 }

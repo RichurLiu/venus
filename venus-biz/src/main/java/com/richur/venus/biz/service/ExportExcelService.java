@@ -1,6 +1,9 @@
 package com.richur.venus.biz.service;
 
+import com.richur.venus.biz.model.po.User;
+
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  * @Author richur
@@ -8,4 +11,5 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface ExportExcelService {
     String exportExcel(HttpServletResponse response);
+    List<User> getUserList();
 }

@@ -3,6 +3,7 @@ package com.richur.venus.web.controller;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.Sheet;
 import com.alibaba.excel.support.ExcelTypeEnum;
+import com.alibaba.fastjson.JSON;
 import com.richur.venus.biz.model.po.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,27 +37,11 @@ public class LoginController {
     @RequestMapping(value = "venus/download")
     public void exportExcel(HttpServletRequest request, HttpServletResponse response){
         exportExcelService.exportExcel(response);
+    }
 
-//        try {
-//
-//            ServletOutputStream out = response.getOutputStream();
-//            ExcelWriter writer = new ExcelWriter(out, ExcelTypeEnum.XLSX, false);
-//            String fileName = new String(("UserInfo" + new SimpleDateFormat("yyyy-MM-dd").format(new Date()))
-//                    .getBytes(), "UTF-8");
-//            Sheet sheet = new Sheet(1, 0, User.class);
-//            sheet.setSheetName("用户");
-//            writer.write(createUserList(),sheet);
-////            writer.write0(getListString(), sheet1);
-//            writer.finish();
-////            response.setContentType("multipart/form-data");
-//            response.setContentType( "application/vnd.ms-excel" );
-//            response.setCharacterEncoding("utf-8");
-//            response.setHeader("Content-disposition", "attachment;filename="+ URLEncoder.encode( fileName + ".xlsx", "utf-8" ));
-//            out.flush();
-//            System.out.println(fileName);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+    @RequestMapping(value = "venus/getUserList")
+    public String getUserList(){
+        return JSON.toJSONString(exportExcelService.getUserList());
     }
 
 

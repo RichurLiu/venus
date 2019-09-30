@@ -14,9 +14,9 @@ import lombok.Setter;
 public class User extends BaseRowModel {
     @ExcelProperty(value = "ID", index = 0)
     private Long id;
-    @ExcelProperty(value = "姓名", index = 1)
+    @ExcelProperty(value = "姓名姓名", index = 1)
     private String name;
-    @ExcelProperty(value = "性别", index = 2)
+    @ExcelProperty(value = "人均播放时长", index = 2)
     private Integer gender;
 
     public User(){}
