@@ -4,6 +4,7 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.util.concurrent.RateLimiter;
 
+import java.io.*;
 import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -64,4 +65,39 @@ public class MainTest {
         });
     }
 
+
+    private static void test03(){
+
+        System.out.println("1");
+
+        System.out.println("2");
+
+
+    }
+    private static void test04() {
+        System.out.println("test04");
+        try{
+
+        }catch (Exception e){
+            System.out.println("error");
+        }
+    }
+
+
+
+    private static void test05(){
+        try {
+            File file = new File("/Users/richur/Desktop/wait.log");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String strLine = null;
+            int lineCount = 1;
+            while(null != (strLine = bufferedReader.readLine())){
+//                logger.info("第[" + lineCount + "]行数据:[" + strLine + "]");
+                lineCount++;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
 }

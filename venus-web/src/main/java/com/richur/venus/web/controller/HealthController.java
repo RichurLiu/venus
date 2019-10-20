@@ -1,6 +1,8 @@
 package com.richur.venus.web.controller;
 
 import com.richur.venus.web.query.TestQuery;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,9 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/venus")
 public class HealthController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(HealthController.class);
 
     @RequestMapping("/health")
     public String healthCheck(){
+        LOGGER.info("OK");
         return "OK";
     }
 
@@ -38,10 +42,18 @@ public class HealthController {
 
 
 
-    @RequestMapping(value = "/tetttst1/param/hsfs", method = RequestMethod.GET, name="测试2")
-    public String test05Interceptor(@RequestParam(name = "path", required = true) String path){
-
-        return "post-2"+path;
+    @RequestMapping(value = "/test", method = RequestMethod.GET, name="测试2")
+    public String test05Interceptor(@RequestParam(name = "count") Integer count){
+        if(count % 5 == 0){
+            LOGGER.error("error");
+        }
+        if(count % 5 > 2){
+            LOGGER.info("info");
+        }
+        if(count % 10 == 0){
+            LOGGER.warn("warn");
+        }
+        return "test-"+count;
     }
 
 }

@@ -22,16 +22,16 @@ public class PrometheusMetricHttpInterceptor implements HandlerInterceptor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PrometheusMetricHttpInterceptor.class);
 
-    private static final Counter COUNTER = Counter.builder("Http请求统计")
-            .tag("HttpCount", "HttpCount")
-            .description("Http请求统计")
-            .register(Metrics.globalRegistry);
+//    private static final Counter COUNTER = Counter.builder("Http请求统计")
+//            .tag("HttpCount", "HttpCount")
+//            .description("Http请求统计")
+//            .register(Metrics.globalRegistry);
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //此处按url统计
 //        request.setAttribute(REQ_PARAM_TIMING, System.currentTimeMillis());
-        COUNTER.increment();
-        LOGGER.info("http count:[{}]",COUNTER.count());
+        //COUNTER.increment();
+//        LOGGER.info("http count:[{}]",COUNTER.count());
 
         return true;
     }

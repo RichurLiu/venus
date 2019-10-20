@@ -1,0 +1,9 @@
+bili.discovery.client:
+  nodeServiceUrl: http://discovery.bilibili.co
+  readTimeout: 3000
+  writeTimeout: 3000
+  connectTimeout: 300
+  nodeRefreshInvervalSeconds: 360
+  autoRenewIntervalSeconds: 300
+  dependencyAppIds:
+    - datacenter.abserver-service.abserver-service

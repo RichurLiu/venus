@@ -35,6 +35,11 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.bilibili.discovery</groupId>
+            <artifactId>discovery-spring-boot</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
