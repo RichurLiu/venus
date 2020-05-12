@@ -37,8 +37,8 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
 
         super.addInterceptors(registry);
 //        registry.addInterceptor(urlInterceptor);
-//        registry.addInterceptor(testInterceptor);
-        registry.addInterceptor(interceptor);
+        registry.addInterceptor(testInterceptor);
+//        registry.addInterceptor(interceptor);
         LOGGER.info("add interceptor {}", JSON.toJSONString(registry));
 
     }

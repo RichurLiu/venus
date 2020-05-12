@@ -2,6 +2,7 @@ package com.richur.venus.biz.util.code;
 
 import com.alibaba.fastjson.JSON;
 import com.richur.venus.biz.model.po.User;
+import com.richur.venus.biz.util.code.model.Point;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -12,6 +13,50 @@ import java.util.stream.Collectors;
  */
 public class ListDemo {
     public static void main(String[] args) {
+        ListDemo demo = new ListDemo();
+        demo.printHourMetrics();
+    }
+
+
+
+
+    private void printHourMetrics(){
+//        Point p0 = new Point("2019102822", 2245L);
+//        Point p1 = new Point("2019102823", 2389L);
+        Point p2 = new Point("2019102900", 111L);
+        Point p3 = new Point("2019102901", 234L);
+        Point p4 = new Point("2019102902", 545L);
+        Point p5 = new Point("2019102903", 956L);
+        List<Point> points = new ArrayList<>(6);
+//        points.add(p0);
+//        points.add(p1);
+        points.add(p5);
+        points.add(p4);
+        points.add(p3);
+        points.add(p2);
+        System.out.println(JSON.toJSONString(points));
+        Collections.reverse(points);
+        System.out.println(JSON.toJSONString(points));
+
+        long preValue = 0;
+        int count = 0;
+        for(Point p : points){
+            String dateHour = p.getX();
+            if(count == 0){
+                preValue = p.getY();
+            } else {
+                if(dateHour.endsWith("00")){
+                    System.out.println(dateHour +":"+p.getY());
+                } else {
+                    System.out.println(dateHour +":"+ (p.getY() - preValue));
+                }
+                preValue = p.getY();
+            }
+            count ++ ;
+        }
+    }
+
+    private void test01(){
         List<User> userList = new ArrayList<>();
         User user01 = new User();
         User user02 = new User();

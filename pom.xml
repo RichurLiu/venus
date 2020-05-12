@@ -26,6 +26,7 @@
         <prometheus.version>0.3.0</prometheus.version>
         <micrometer.version>1.2.1</micrometer.version>
         <discovery.version>0.1.0</discovery.version>
+        <kafka.version>2.1.1</kafka.version>
     </properties>
 
     <dependencies>
@@ -94,6 +95,19 @@
                 <version>${micrometer.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.bilibili.exp</groupId>
+                <artifactId>exp-sdk-java</artifactId>
+                <version>0.1.0</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.11.3</version>
+            </dependency>
+
             <!--<dependency>-->
                 <!--<groupId>io.github.mweirauch</groupId>-->
                 <!--<artifactId>micrometer-jvm-extras</artifactId>-->
@@ -115,6 +129,46 @@
                 <artifactId>discovery-spring-boot</artifactId>
                 <version>${discovery.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka_2.12</artifactId>
+                <version>${kafka.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>4.4.5</version>
+            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.apache.thrift</groupId>-->
+                <!--<artifactId>libthrift</artifactId>-->
+                <!--<version>0.9.3</version>-->
+            <!--</dependency>-->
+            <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.hive/hive-exec &ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>org.apache.hive</groupId>-->
+                <!--<artifactId>hive-exec</artifactId>-->
+                <!--<version>2.3.4</version>-->
+            <!--</dependency>-->
+
+
         </dependencies>
     </dependencyManagement>
 

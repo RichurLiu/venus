@@ -31,14 +31,19 @@ public class TestInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //LOGGER.info("preHandle" + JSON.toJSONString(request));
+//        LOGGER.info(request.getRequestURI());
+//        LOGGER.info(request.getRequestURL().toString());
 
-
-
-        RateLimiter limiter = urlLimiter.get("venus", ()-> RateLimiter.create(10));
+        LOGGER.info("TestInterceptor==============");
+        RateLimiter limiter = urlLimiter.get("venus", ()-> RateLimiter.create(100));
         boolean contains = request.getRequestURI().contains("/venus/test/1");
+        boolean b = limiter.tryAcquire();
+        if(b){
+            LOGGER.info("true");
+        } else {
+            LOGGER.info("false, 触发限流");
+        }
 
-
-//        boolean b = limiter.tryAcquire();
         if(contains){
             if(request.getMethod().toLowerCase().equals("post")){
                 String body = getBody(request);

@@ -11,7 +11,7 @@ public class Student extends Person {
 
     public int getId(){
         id = this.id;
-        return super.id;
+        return id;
     }
 
     public static void main(String[] args) {

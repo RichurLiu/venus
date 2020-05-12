@@ -12,4 +12,6 @@ import lombok.Setter;
 public class TestQuery {
     private Long id;
     private String key;
+    private Integer value;
+    private Boolean flag;
 }

@@ -9,10 +9,10 @@ import org.springframework.context.annotation.FilterType;
 /**
  * @SpringBootApplication 标记spring boot项目启动项
  */
-//@ComponentScan(basePackages = {"com.richur.venus"})
-@ComponentScan(basePackages = {"com.richur.venus","com.bilibili.naming"})
+@ComponentScan(basePackages = {"com.richur.venus"})
+//@ComponentScan(basePackages = {"com.richur.venus","com.bilibili.naming"})
 @SpringBootApplication
-@EnableDiscoveryNamingClient
+//@EnableDiscoveryNamingClient
 public class VenusWebApplication {
 
     public static void main(String[] args) {

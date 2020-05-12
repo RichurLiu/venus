@@ -40,6 +40,26 @@
             <groupId>com.bilibili.discovery</groupId>
             <artifactId>discovery-spring-boot</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.hive/hive-exec -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.hive</groupId>-->
+            <!--<artifactId>hive-exec</artifactId>-->
+        <!--</dependency>-->
+
+
     </dependencies>
 
     <build>

@@ -24,7 +24,7 @@ public class VenusDiscoveryConfig {
     @Value("${server.port}")
     private String port;
 
-    @Bean
+    //@Bean
     public DiscoverySelfConfigProperties discoverySelfConfigProperties() throws UnknownHostException {
         DiscoverySelfConfigProperties selfConfigProperties = new DiscoverySelfConfigProperties();
         selfConfigProperties.setAppId("datacenter.abserver-service.abserver-service");
