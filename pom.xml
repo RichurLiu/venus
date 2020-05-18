@@ -16,6 +16,7 @@
     <modules>
         <module>venus-web</module>
         <module>venus-biz</module>
+        <module>venus-data-structure</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
