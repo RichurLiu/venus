@@ -1,5 +1,6 @@
 package com.richur.venus.web.interceptor;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.util.concurrent.RateLimiter;
@@ -46,6 +47,8 @@ public class URLInterceptor implements HandlerInterceptor {
 //            LOGGER.info(request.getMethod());
 //            request.getRequestDispatcher("/venus/test/2").forward(request, response);
 //        }
+        String count = request.getParameter("count");
+//        LOGGER.info("getParameter------------:{}", JSON.toJSON(request));
         LOGGER.info("URLInterceptor==============");
         return true;
     }

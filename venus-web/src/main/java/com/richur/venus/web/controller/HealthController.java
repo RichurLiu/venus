@@ -30,20 +30,12 @@ public class HealthController {
     }
 
     @RequestMapping(value = "/test/1", method = RequestMethod.GET, name="测试get")
-    public String test01Interceptor(@RequestParam(name = "count") Integer count){
-        log.info("get - test/1-1111=====11111");
-        try {
-//            int res = resultDiv(count);
-
-            ExecutorService executorService = ThreadFactoryUtils.getSingleThreadScheduleExecutor("auto-dispatcher-protocol-thread-"
-                    + Clock.systemDefaultZone().millis());
-            executorService.submit(()->{
-                LOGGER.info("OK" + count);
-            });
-            return "success";
-        } catch (Exception e) {
-            return "get count fail";
-        }
+    public String test01Interceptor(@RequestBody TestQuery query){
+        log.info("get - test/1-1111=====11111,flag:{}", query.getFlag());
+        log.info("get - test/1-1111=====11111,id:{}", query.getId());
+        log.info("get - test/1-1111=====11111,key:{}", query.getKey());
+        log.info("get - test/1-1111=====11111,value:{}", query.getValue());
+        return "success";
     }
     @RequestMapping(value = "/test/1", method = RequestMethod.POST, name="测试post")
     public String test03Interceptor(@RequestBody TestQuery testQuery){

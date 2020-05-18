@@ -51,9 +51,16 @@ public class TestInterceptor implements HandlerInterceptor {
                 LOGGER.info("true------------"+ body);
 //                LOGGER.info("true------------");
             }
+            String count = request.getParameter("count");
+
+            LOGGER.info("getParameter------------:{}", getBody(request));
+            LOGGER.info("getParameter------------:{}", count);
             return  true;
         } else {
 //            LOGGER.error("false------------");
+            String count = request.getParameter("count");
+            LOGGER.info("getParameter------------:{}", count);
+
             return true;
         }
 
