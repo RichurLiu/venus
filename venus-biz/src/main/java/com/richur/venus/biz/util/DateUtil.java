@@ -56,6 +56,13 @@ public class DateUtil {
         System.out.println(maxLogDate);
 
 
+
+        String dirStr ="/data/log/resource/12345_123455/mr.jar";
+
+        String substr = dirStr.substring(0, dirStr.lastIndexOf("/"));
+        System.out.println(substr);
+
+
     }
 
     private static int fun(int a, int b){
