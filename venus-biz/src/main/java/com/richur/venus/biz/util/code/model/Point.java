@@ -2,6 +2,7 @@ package com.richur.venus.biz.util.code.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author richur
@@ -9,6 +10,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
+@ToString
 public class Point {
     private String x;
     private Long y;

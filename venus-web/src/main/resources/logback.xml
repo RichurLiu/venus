@@ -119,7 +119,7 @@
     </appender>
 
 
-    <logger name="com.richur.venus" level="DEBUG" additivity="true">
+    <logger name="com.richur.venus" level="INFO" additivity="true">
         <appender-ref ref="ERROR-APPENDER"/>
         <appender-ref ref="INFO-APPENDER"/>
         <appender-ref ref="WARN-APPENDER"/>
@@ -128,7 +128,7 @@
     <!-- 也是<loger>元素，但是它是根loger。只有一个level属性 -->
     <root>
         <!-- 打印INFO级别日志及以上级别日志 -->
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <!-- 控制台输出 -->
         <appender-ref ref="STDOUT"/>
         <!-- 文件输出 -->

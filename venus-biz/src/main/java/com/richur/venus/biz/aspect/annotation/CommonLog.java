@@ -1,5 +1,8 @@
 package com.richur.venus.biz.aspect.annotation;
 
+/**
+ * @author richur
+ */
 public @interface CommonLog {
 
     /**

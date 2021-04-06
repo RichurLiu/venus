@@ -36,10 +36,6 @@
             <artifactId>joda-time</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.bilibili.discovery</groupId>
-            <artifactId>discovery-spring-boot</artifactId>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
         <dependency>
             <groupId>org.jsoup</groupId>
@@ -52,6 +48,10 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.hive/hive-exec -->
         <!--<dependency>-->

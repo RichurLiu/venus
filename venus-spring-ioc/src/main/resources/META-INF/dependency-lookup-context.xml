@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- services -->
+
+    <bean id="user" class="com.richur.venus.spring.ioc.User">
+        <property name="name" value="richur"/>
+        <property name="age" value="12"/>
+    </bean>
+
+    <bean id="superUser" class="com.richur.venus.spring.ioc.SuperUser" parent="user" primary="true">
+        <property name="level" value="1"/>
+    </bean>
+
+    <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+        <property name="targetBeanName" value="user"/>
+    </bean>
+
+</beans>

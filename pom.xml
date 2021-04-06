@@ -17,16 +17,17 @@
         <module>venus-web</module>
         <module>venus-biz</module>
         <module>venus-data-structure</module>
+        <module>venus-design-pattern</module>
+        <module>venus-spring-ioc</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
         <easyexcel.version>1.1.1</easyexcel.version>
         <fastjson.version>1.2.58</fastjson.version>
         <joda.version>2.9.4</joda.version>
-        <guava.version>15.0</guava.version>
+        <guava.version>20.0</guava.version>
         <prometheus.version>0.3.0</prometheus.version>
         <micrometer.version>1.2.1</micrometer.version>
-        <discovery.version>0.1.0</discovery.version>
         <kafka.version>2.1.1</kafka.version>
     </properties>
 
@@ -96,11 +97,7 @@
                 <version>${micrometer.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.bilibili.exp</groupId>
-                <artifactId>exp-sdk-java</artifactId>
-                <version>0.1.0</version>
-            </dependency>
+
 
             <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
             <dependency>
@@ -125,11 +122,6 @@
                 <!--<version>1.1.17</version>-->
             <!--</dependency>-->
 
-            <dependency>
-                <groupId>com.bilibili.discovery</groupId>
-                <artifactId>discovery-spring-boot</artifactId>
-                <version>${discovery.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.apache.kafka</groupId>

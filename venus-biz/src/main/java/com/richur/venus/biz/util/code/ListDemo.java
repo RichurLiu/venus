@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.richur.venus.biz.model.po.User;
 import com.richur.venus.biz.util.code.model.Point;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -13,8 +15,26 @@ import java.util.stream.Collectors;
  */
 public class ListDemo {
     public static void main(String[] args) {
-        ListDemo demo = new ListDemo();
-        demo.printHourMetrics();
+//        ListDemo demo = new ListDemo();
+//        demo.printHourMetrics();
+        String dir = "/Users/richur/archer/t.sql";
+        File file = new File(dir);
+        if (!file.exists()) {
+            try {
+                boolean newFile = file.createNewFile();
+                System.out.println(newFile);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void changeA(Point a){
+        Point b = new Point("2", 3L);
+//        a.setY(b.getY());
+//        a.setX(b.getX());
+        a = b;
+        System.out.println("sss:"+a);
     }
 
 

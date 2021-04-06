@@ -1,6 +1,5 @@
 package com.richur.venus.web;
 
-import com.bilibili.naming.protocol.discovery.springboot.EnableDiscoveryNamingClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
