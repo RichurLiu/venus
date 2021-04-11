@@ -20,6 +20,7 @@
         <module>venus-design-pattern</module>
         <module>venus-spring-ioc</module>
         <module>venus-spring-bean</module>
+        <module>venus-leetcode</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
