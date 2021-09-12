@@ -21,6 +21,7 @@
         <module>venus-spring-ioc</module>
         <module>venus-spring-bean</module>
         <module>venus-leetcode</module>
+        <module>venus-mysql</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
