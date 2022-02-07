@@ -22,6 +22,7 @@
         <module>venus-spring-bean</module>
         <module>venus-leetcode</module>
         <module>venus-mysql</module>
+        <module>venus-jvm</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
