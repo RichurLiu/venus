@@ -9,9 +9,9 @@ public class BinarySearchTree {
     private Node find(int data) {
         Node p = tree;
         while (null != p) {
-            if (p.data == data) {
+            if (p.val == data) {
                 return p;
-            } else if (p.data > data) {
+            } else if (p.val > data) {
                 p = p.left;
             } else {
                 p = p.right;
@@ -28,10 +28,10 @@ public class BinarySearchTree {
         }
         Node p = tree;
         while (null != p) {
-            if (p.data == data) {
+            if (p.val == data) {
                 throw new Exception("node has exist.");
             }
-            if (p.data > data) {
+            if (p.val > data) {
                 if (null == p.left) {
                     p.left = new Node(data);
                     return;
@@ -57,9 +57,9 @@ public class BinarySearchTree {
         Node p = tree;
         //pp 记录被删节点的父节点
         Node pp = null;
-        while(p != null && p.data !=data){
+        while(p != null && p.val !=data){
             pp = p;
-            if (p.data > data) {
+            if (p.val > data) {
                 p = p.left;
             } else {
                 p = p.right;
@@ -79,7 +79,7 @@ public class BinarySearchTree {
                 minP = minPp.left;
 
             }
-            p.data = minP.data;//值替换
+            p.val = minP.val;//值替换
             p = minP; //下面开始删除minP节点
             pp = minPp;
         }
@@ -111,7 +111,7 @@ public class BinarySearchTree {
         Node targetNode = bsTree.find(4);
 
         if (targetNode != null) {
-            System.out.println(targetNode.data);
+            System.out.println(targetNode.val);
         } else {
             System.out.println("NULL");
         }

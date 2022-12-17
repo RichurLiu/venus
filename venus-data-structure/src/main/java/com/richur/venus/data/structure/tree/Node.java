@@ -4,7 +4,7 @@ package com.richur.venus.data.structure.tree;
  * @author richur
  */
 public class Node {
-    public int data;
+    public int val;
     public Node left;
     public Node right;
 
@@ -12,15 +12,15 @@ public class Node {
     }
 
     public Node(int data) {
-        this.data = data;
+        this.val = data;
     }
 
-    public int getData() {
-        return data;
+    public int getVal() {
+        return val;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setVal(int val) {
+        this.val = val;
     }
 
     public Node getLeft() {
