@@ -32,7 +32,7 @@
         <guava.version>20.0</guava.version>
         <prometheus.version>0.3.0</prometheus.version>
         <micrometer.version>1.2.1</micrometer.version>
-        <kafka.version>2.1.1</kafka.version>
+        <kafka.version>2.6.3</kafka.version>
     </properties>
 
     <dependencies>
